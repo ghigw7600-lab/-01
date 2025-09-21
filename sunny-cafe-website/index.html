@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunny Cafe - Coffee, Dessert, Brunch</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .hero { background: linear-gradient(135deg, #d35400 0%, #f39c12 100%); color: white; padding: 100px 0; text-align: center; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
+        .btn { background: #e67e22; color: white; padding: 15px 30px; border: none; border-radius: 5px; text-decoration: none; display: inline-block; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .section { padding: 60px 0; }
+        .services { background: #f8f9fa; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px; }
+        .service-card { background: white; padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <h1>Sunny Cafe</h1>
+            <p>Professional coffee, dessert, brunch services</p>
+            <a href="#contact" class="btn">Visit Us</a>
+        </div>
+    </section>
+    
+    <section class="services section">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Premium Coffee</h3>
+                    <p>Freshly brewed coffee from the finest beans</p>
+                </div>
+                <div class="service-card">
+                    <h3>Fresh Desserts</h3>
+                    <p>Homemade desserts prepared daily</p>
+                </div>
+                <div class="service-card">
+                    <h3>Healthy Brunch</h3>
+                    <p>Nutritious brunch options for a perfect start</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="section" style="background: #d35400; color: white;">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Phone: 010-1234-5678</p>
+            <p>Email: info@sunnycafe.com</p>
+            <p>Address: Seoul, Gangnam-gu</p>
+        </div>
+    </section>
+</body>
+</html>

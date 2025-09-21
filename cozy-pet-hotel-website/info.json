@@ -1,0 +1,15 @@
+{
+  "business_name": "Cozy Pet Hotel",
+  "business_type": "pet care",
+  "keywords": [
+    "Pet Boarding",
+    "Grooming",
+    "Training"
+  ],
+  "contact": {
+    "phone": "010-3456-7890",
+    "email": "hello@cozypet.com",
+    "address": "Seoul, Songpa-gu"
+  },
+  "created": "2025-09-21T23:43:15.998657"
+}

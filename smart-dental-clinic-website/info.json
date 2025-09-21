@@ -1,0 +1,15 @@
+{
+  "business_name": "Smart Dental Clinic",
+  "business_type": "dental clinic",
+  "keywords": [
+    "Implants",
+    "Cleaning",
+    "Orthodontics"
+  ],
+  "contact": {
+    "phone": "010-1234-5678",
+    "email": "info@smartdental.com",
+    "address": "Seoul, Gangnam-gu"
+  },
+  "created": "2025-09-21T23:43:15.988573"
+}

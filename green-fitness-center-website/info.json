@@ -1,0 +1,15 @@
+{
+  "business_name": "Green Fitness Center",
+  "business_type": "fitness center",
+  "keywords": [
+    "Personal Training",
+    "Group Classes",
+    "Nutrition"
+  ],
+  "contact": {
+    "phone": "010-2345-6789",
+    "email": "contact@greenfitness.com",
+    "address": "Seoul, Mapo-gu"
+  },
+  "created": "2025-09-21T23:43:15.994526"
+}
