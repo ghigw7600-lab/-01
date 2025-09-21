@@ -1,0 +1,53 @@
+# Windows system files
+AppData/
+.vscode/
+.claude/
+Documents/
+Desktop/
+Downloads/
+Pictures/
+Videos/
+Music/
+Favorites/
+Links/
+Saved Games/
+Searches/
+OneDrive/
+
+# Temporary files
+*.tmp
+*.temp
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Browser data
+**/User Data/
+**/Cache/
+**/Cookies/
+**/History/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Node modules
+node_modules/
+
+# IDE files
+.vs/
+.idea/
+
+# Log files
+*.log
+
+# Keep only our website projects
+!*website*/
+!*.py
+!*.html
+!*.css
+!*.js
+!*.json
+!*.md
+!CLAUDE.md
