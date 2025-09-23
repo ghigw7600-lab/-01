@@ -2,6 +2,31 @@
 
 This file contains configuration and preferences for Claude Code.
 
+## 🚀 **컴퓨터 재시작 후 자동 초기화**
+
+**매번 수동으로 명령어 입력하기 싫다면:**
+
+### 방법 1: 자동 배치 파일 실행
+```bash
+# 바탕화면이나 시작 메뉴에서 실행
+C:\Users\기광우\claude-auto-init.bat
+```
+
+### 방법 2: Claude에게 요청
+```
+"프로젝트01 자동 초기화"
+```
+라고 말하면 Claude가 자동으로:
+- Git 동기화 확인
+- 로컬 서버 시작
+- IP 주소 확인
+- 테스트 링크 제공
+
+### 방법 3: Windows 시작 프로그램 등록
+1. `Win + R` → `shell:startup`
+2. `claude-auto-init.bat` 복사
+3. 컴퓨터 시작 시 자동 실행
+
 ## 🎯 프로젝트01 완료 상태 (2025-09-23)
 
 ### 📋 **완료된 주요 작업들**
@@ -82,14 +107,22 @@ start "C:\Users\기광우\pet-funeral-website\unified-admin.html"
 
 ## 🔄 프로젝트01 이어받기 가이드
 
-**사용자가 "프로젝트01 이어서"라고 하면:**
+**사용자가 다음 키워드 중 하나를 말하면:**
+- "프로젝트01 이어서"
+- "프로젝트01 자동 초기화"
+- "자동 초기화"
+- "최신 상태로"
+
+**Claude가 자동으로 수행할 작업:**
 
 1. **현재 상태 확인**: `PROJECT01_STATUS.md` 파일 읽기
-2. **로컬 서버 시작**: `cd pet-funeral-website && python -m http.server 8000`
-3. **IP 확인**: `ipconfig | findstr "IPv4"`
-4. **테스트 링크 제공**:
+2. **Git 동기화**: `git status` 및 `git pull origin main`
+3. **로컬 서버 시작**: `cd pet-funeral-website && python -m http.server 8000`
+4. **IP 확인**: `ipconfig | findstr "IPv4"`
+5. **테스트 링크 제공**:
    - 메인: `http://[IP]:8000/index.html`
    - 게이트: `http://[IP]:8000/gate.html`
+6. **브라우저 캐시 클리어 안내**
 
 **주요 완성 기능들:**
 - ✅ 모바일 스크롤 반응형 예약바 (메인섹션 2/3 지점 트리거)
