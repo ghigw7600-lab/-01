@@ -2,42 +2,56 @@
 
 This file contains configuration and preferences for Claude Code.
 
-## Current Session State (2025-09-21)
+## 🎯 프로젝트01 완료 상태 (2025-09-23)
 
 ### 📋 **완료된 주요 작업들**
 
-1. **통합 관리자 페이지 구현** (`unified-admin.html`)
+1. **모바일 스크롤 반응형 예약바** (`index.html`)
+   - 메인섹션 2/3 지점에서 하단바로 전환
+   - 디폴트: "빠른 예약 / 보다 빠르게 예약진행 가능합니다."
+   - 화면 최하단에 완전히 붙는 하단바 구현
+   - 부드러운 애니메이션 전환 (0.6초 cubic-bezier)
+   - PC 버전은 기존 상태 유지
+
+2. **게이트 페이지 구현** (`gate.html`)
+   - fourpaws.co.kr 스타일 진입 페이지
+   - "온라인 빠른 예약하기" 메인 CTA
+   - 반응형 모바일 최적화 디자인
+   - 그라데이션 배경 + 글래스모피즘 효과
+
+3. **통합 관리자 페이지** (`unified-admin.html`)
    - 숨결 장례식장 + 동네화물 통합 관리
    - 로그인: admin/admin123
-   - 로그인 상태 유지 기능 추가 (LocalStorage 기반)
-   - 실시간 데이터 동기화 (3초마다 자동 새로고침)
-
-2. **장례 홈페이지 개선** (`index_FOREST_TEST.html`)
-   - 지점선택란 제거 (예약 폼 간소화)
-   - 서브메뉴가 위로 나타나도록 수정
-   - 관리자 페이지와 실시간 연동 구현
-
-3. **화물 운송 사이트 연동** (`freight-delivery-website/index.html`)
-   - 관리자 페이지와 예약 데이터 동기화
    - LocalStorage 기반 데이터 저장
 
-### 🔗 **데이터 연동 시스템**
-- **저장 방식**: LocalStorage 기반
-- **실시간 동기화**: 3초마다 자동 업데이트
-- **데이터 타입**:
-  - `funeralBookings` (장례 예약)
-  - `funeralInquiries` (장례 문의)
-  - `freightOrders` (화물 주문)
-  - `freightInquiries` (화물 문의)
+### 🔧 **기술 구현 핵심**
+
+**모바일 예약바 JavaScript:**
+```javascript
+const scrollThreshold = heroHeight * (2/3);
+if (scrollY > scrollThreshold) {
+    bookingBar.classList.add('bottom-bar-active');
+}
+```
+
+**CSS 하단바 스타일:**
+```css
+.mobile-quick-booking-bar.bottom-bar-active {
+    bottom: 0; left: 0; width: 100vw;
+    padding: 1rem 1rem calc(env(safe-area-inset-bottom, 0px) + 1rem) 1rem;
+}
+```
 
 ### 📁 **주요 파일 위치**
+- 메인 홈페이지: `C:\Users\기광우\pet-funeral-website\index.html`
+- 게이트 페이지: `C:\Users\기광우\pet-funeral-website\gate.html`
 - 통합 관리자: `C:\Users\기광우\pet-funeral-website\unified-admin.html`
-- 장례 홈페이지: `C:\Users\기광우\pet-funeral-website\index_FOREST_TEST.html`
-- 화물 사이트: `C:\Users\기광우\freight-delivery-website\index.html`
+- 프로젝트 상태: `C:\Users\기광우\pet-funeral-website\PROJECT01_STATUS.md`
 
 ### 🚀 **배포 상태**
-- GitHub 연동 필요
-- Netlify 자동 배포 설정 확인 필요
+- GitHub: ✅ 최신 커밋 0a7da9a 푸시 완료
+- Netlify: ❌ 신용 한도 초과로 일시 중지
+- 로컬 테스트: `python -m http.server 8000`
 
 ## Commands
 
@@ -50,15 +64,35 @@ git push origin main
 # 관리자 페이지 열기
 start "C:\Users\기광우\pet-funeral-website\unified-admin.html"
 
-# 장례 홈페이지 열기
-start "C:\Users\기광우\pet-funeral-website\index_FOREST_TEST.html"
+# 로컬 서버 시작 (모바일 테스트용)
+cd pet-funeral-website && python -m http.server 8000
 
-# 화물 사이트 열기
-start "C:\Users\기광우\freight-delivery-website\index.html"
+# IP 확인
+ipconfig | findstr "IPv4"
+
+# 게이트 페이지 열기
+start "C:\Users\기광우\pet-funeral-website\gate.html"
+
+# 메인 홈페이지 열기
+start "C:\Users\기광우\pet-funeral-website\index.html"
+
+# 관리자 페이지 열기
+start "C:\Users\기광우\pet-funeral-website\unified-admin.html"
 ```
 
-## Notes
+## 🔄 프로젝트01 이어받기 가이드
 
-- 다음 세션에서는 현재 상태 그대로 작업 재개 가능
-- 모든 데이터 연동 시스템이 완성되어 있음
-- 관리자 페이지 로그인 상태 유지됨
+**사용자가 "프로젝트01 이어서"라고 하면:**
+
+1. **현재 상태 확인**: `PROJECT01_STATUS.md` 파일 읽기
+2. **로컬 서버 시작**: `cd pet-funeral-website && python -m http.server 8000`
+3. **IP 확인**: `ipconfig | findstr "IPv4"`
+4. **테스트 링크 제공**:
+   - 메인: `http://[IP]:8000/index.html`
+   - 게이트: `http://[IP]:8000/gate.html`
+
+**주요 완성 기능들:**
+- ✅ 모바일 스크롤 반응형 예약바 (메인섹션 2/3 지점 트리거)
+- ✅ fourpaws 스타일 게이트 페이지
+- ✅ PC 버전 호환성 유지
+- ✅ GitHub 저장 완료 (커밋: 0a7da9a)
