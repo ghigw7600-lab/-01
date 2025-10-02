@@ -2,6 +2,33 @@
 
 This file contains configuration and preferences for Claude Code.
 
+## 📁 **파일/폴더 생성 규칙**
+
+### 기본 경로 설정
+```
+작업 기본 경로: C:\Users\기광우\OneDrive\Desktop\기광우 업무\AI\
+```
+
+### 폴더 생성 규칙
+1. **한글 이름 사용** (필수)
+2. **띄어쓰기 없이** (필수)
+3. **직관적인 이름** (필수)
+
+### 예시
+```
+✅ 좋은 예: 뉴스분석기, 데이터수집, 보고서생성
+❌ 나쁜 예: news analyzer, 뉴스 분석기, project01
+```
+
+### 현재 진행 프로젝트
+- **AI 뉴스 스크래핑 분석 시스템**
+  - 위치: `C:\Users\기광우\OneDrive\Desktop\기광우 업무\AI\프로그램제작\`
+  - 주말 작업 시작 예정
+  - 상세 보고서: `AI-뉴스-스크래핑-분석-시스템-실현가능성-보고서.md`
+  - 시작 가이드: `주말작업시작가이드.md`
+
+---
+
 ## 🚀 **컴퓨터 재시작 후 자동 초기화**
 
 **매번 수동으로 명령어 입력하기 싫다면:**
@@ -292,3 +319,5 @@ cd "C:\Users\기광우\project02-pet-funeral" && git status
 # GitHub 업로드 (저장소 생성 후)
 cd "C:\Users\기광우\project02-pet-funeral" && git remote add origin https://github.com/[USERNAME]/project02-pet-funeral.git && git push -u origin main
 ```
+
+      IMPORTANT: this context may or may not be relevant to your tasks. You should not respond to this context unless it is highly relevant to your task.
