@@ -1,53 +1,33 @@
-# Windows system files
-AppData/
-.vscode/
-.claude/
-Documents/
-Desktop/
-Downloads/
-Pictures/
-Videos/
-Music/
-Favorites/
-Links/
-Saved Games/
-Searches/
-OneDrive/
+# 시스템 파일
+NTUSER.DAT*
+ntuser.dat*
+ntuser.ini
+NUL
+Application Data/
+Local Settings/
+My Documents/
+NetHood/
+PrintHood/
+Recent/
+SendTo/
+Templates/
+시작 메뉴/
 
-# Temporary files
-*.tmp
-*.temp
-Thumbs.db
-ehthumbs.db
-Desktop.ini
+# 캐시 및 임시 파일
+.cache/
+.docker/
+.n8n/
+.ollama/
+.node_repl_history
 
-# Browser data
-**/User Data/
-**/Cache/
-**/Cookies/
-**/History/
+# 압축 파일
+*.zip
 
-# Python cache
-__pycache__/
-*.pyc
-*.pyo
-
-# Node modules
-node_modules/
-
-# IDE files
-.vs/
-.idea/
-
-# Log files
-*.log
-
-# Keep only our website projects
-!*website*/
-!*.py
-!*.html
-!*.css
-!*.js
-!*.json
-!*.md
-!CLAUDE.md
+# 특수 디렉토리
+CrossDevice/
+elite-law-firm-auto/
+gourmet-bakery-auto/
+tech-repair-shop-auto/
+스마트-헬스케어-auto/
+프리미엄-카페-auto/
+n8n프로젝트01/
